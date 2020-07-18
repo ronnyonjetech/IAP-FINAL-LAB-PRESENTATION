@@ -1,0 +1,517 @@
+{
+	"info": {
+		"_postman_id": "2b25eaf6-040e-4fb4-b5ff-636f80558e3d",
+		"name": "Laravel Lab 6.2 and 7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lab 6.2: Gets all Reviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/reviews/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reviews",
+						"all"
+					]
+				},
+				"description": "Write an API endpoint to return all reviews of a given car in JSON format."
+			},
+			"response": [
+				{
+					"name": "6.2 Gets all Reviews",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/reviews/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"reviews",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jul 2020 12:14:08 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jul 2020 12:14:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"car_id\": 1,\n            \"comment\": \"Great SUV suiting all family car needs\",\n            \"updated_at\": \"2020-06-24T12:21:48.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"car_id\": 1,\n            \"comment\": \"Probably one of the best SUVs out there with a touch of Swedish taste\",\n            \"updated_at\": \"2020-06-27T23:30:43.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"car_id\": 3,\n            \"comment\": \"Great sedan. Guaranteed value for your money.\",\n            \"updated_at\": \"2020-06-27T23:33:33.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"car_id\": 2,\n            \"comment\": \"Great car, the fuel economy on this model is amazing. Would definitely recommend.\",\n            \"updated_at\": \"2020-06-09T12:24:29.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"car_id\": 2,\n            \"comment\": \"Good car. Affordable parts and maintenance too.\",\n            \"updated_at\": \"2020-06-18T12:23:14.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"car_id\": 3,\n            \"comment\": \"The car is great but the parts are a bit expensive.\",\n            \"updated_at\": \"2020-06-11T12:23:14.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Lab 7: Gets specific car (from exposed server)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0b5998d5802e.ngrok.io/api/cars/1",
+					"protocol": "http",
+					"host": [
+						"0b5998d5802e",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"api",
+						"cars",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "Gets specific car from server exposed using ngrok."
+			},
+			"response": [
+				{
+					"name": "Lab 7: Gets specific car (from exposed server)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0b5998d5802e.ngrok.io/api/cars/1",
+							"protocol": "http",
+							"host": [
+								"0b5998d5802e",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"cars",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "0b5998d5802e.ngrok.io"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jul 2020 12:19:08 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jul 2020 12:19:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"make\": \"Volvo\",\n        \"model\": \"XC90\",\n        \"produced_on\": \"2020-06-11\",\n        \"created_at\": \"2020-06-27T20:26:32.000000Z\",\n        \"updated_at\": \"2020-06-27T20:26:32.000000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Lab 6.2: Gets all reviews of a specific car",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0b5998d5802e.ngrok.io/api/cars/1/allreviews",
+					"protocol": "http",
+					"host": [
+						"0b5998d5802e",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"api",
+						"cars",
+						"1",
+						"allreviews"
+					]
+				},
+				"description": "Write a route and link it to a named action method ReviewsController and proceed to demonstrate how to read all reviews of a car of some id (e.g. id=1). Use postman to show results."
+			},
+			"response": [
+				{
+					"name": "Lab 6.2: Gets all reviews of a specific car",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/cars/1/allreviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cars",
+								"1",
+								"allreviews"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jul 2020 12:46:51 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jul 2020 12:46:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"car_id\": 1,\n        \"comment\": \"Great SUV suiting all family car needs\",\n        \"created_at\": \"2020-06-10T12:21:48.000000Z\",\n        \"updated_at\": \"2020-06-24T12:21:48.000000Z\"\n    },\n    {\n        \"id\": 2,\n        \"car_id\": 1,\n        \"comment\": \"Probably one of the best SUVs out there with a touch of Swedish taste\",\n        \"created_at\": \"2020-06-27T23:30:43.000000Z\",\n        \"updated_at\": \"2020-06-27T23:30:43.000000Z\"\n    }\n]"
+				},
+				{
+					"name": "Lab 6.2: Gets all reviews of a specific car",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0b5998d5802e.ngrok.io/api/cars/1/allreviews",
+							"protocol": "http",
+							"host": [
+								"0b5998d5802e",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"cars",
+								"1",
+								"allreviews"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "0b5998d5802e.ngrok.io"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jul 2020 12:34:08 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jul 2020 12:34:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"car_id\": 1,\n        \"comment\": \"Great SUV suiting all family car needs\",\n        \"created_at\": \"2020-06-10T12:21:48.000000Z\",\n        \"updated_at\": \"2020-06-24T12:21:48.000000Z\"\n    },\n    {\n        \"id\": 2,\n        \"car_id\": 1,\n        \"comment\": \"Probably one of the best SUVs out there with a touch of Swedish taste\",\n        \"created_at\": \"2020-06-27T23:30:43.000000Z\",\n        \"updated_at\": \"2020-06-27T23:30:43.000000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Lab 6.2: Gets car details of a specific review",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/reviews/2/car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reviews",
+						"2",
+						"car"
+					]
+				},
+				"description": "Write a route and link it to a named action method in ReviewsController and proceed to demonstrate how to read car details of a review of some id (e.g. review id=2). Use postman to show results. "
+			},
+			"response": [
+				{
+					"name": "Lab 6.2: Gets car details of a specific review",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/reviews/2/car",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"reviews",
+								"2",
+								"car"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jul 2020 12:47:25 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jul 2020 12:47:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"make\": \"Volvo\",\n    \"model\": \"XC90\",\n    \"produced_on\": \"2020-06-11\",\n    \"created_at\": \"2020-06-27T20:26:32.000000Z\",\n    \"updated_at\": \"2020-06-27T20:26:32.000000Z\"\n}"
+				},
+				{
+					"name": "Lab 6.2: Gets car details of a specific review",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0b5998d5802e.ngrok.io/api/reviews/2/car",
+							"protocol": "http",
+							"host": [
+								"0b5998d5802e",
+								"ngrok",
+								"io"
+							],
+							"path": [
+								"api",
+								"reviews",
+								"2",
+								"car"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "0b5998d5802e.ngrok.io"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jul 2020 12:41:18 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jul 2020 12:41:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"make\": \"Volvo\",\n    \"model\": \"XC90\",\n    \"produced_on\": \"2020-06-11\",\n    \"created_at\": \"2020-06-27T20:26:32.000000Z\",\n    \"updated_at\": \"2020-06-27T20:26:32.000000Z\"\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
